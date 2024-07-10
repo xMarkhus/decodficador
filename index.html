@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/logo-alura.svg" alt="Alura" class="alura-logo">
+        <h1>Decodificador de Texto</h1>
+        <div class="content">
+            <div class="left-panel">
+                <textarea id="input-text" placeholder="Digite o texto aqui..." oninput="verificarTexto()"></textarea>
+                <div class="info">
+                    <img src="./assets/exclamacao.png" alt="Exclamação" class="icon">
+                    <span>Somente letras minúsculas e sem acento.</span>
+                </div>
+                <div class="buttons">
+                    <button onclick="criptografar()">Criptografar</button>
+                    <button onclick="descriptografar()">Descriptografar</button>
+                </div>
+                <textarea id="output-text" placeholder="Resultado..." oninput="mostrarTextoDigitado()"></textarea>
+                <button id="copy-button" onclick="copiarTexto()">Copiar Texto</button>
+            </div>
+            <div id="mensagem-vazia" class="right-panel">
+                <img src="./assets/looking.svg" alt="Menina com lupa" class="girl-icon">
+                <p>Nenhuma mensagem encontrada</p>
+                <p>Digite um texto que você queira criptografar ou descriptografar</p>
+            </div>
+            <div id="texto-digitado" class="right-panel" style="display: none;">
+                <textarea id="live-text" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
